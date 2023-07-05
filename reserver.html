@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="./images/logojk2.png">
+    <title>Réservation</title>
+    <style>
+        .container {
+          padding: 20px;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        .form-group {
+          margin-bottom: 10px;
+        }
+        .form-group label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          width: 100%;
+          padding: 5px;
+        }
+        textarea#message {
+        height: 100px; /* Définissez ici la hauteur souhaitée en pixels */
+        }
+        .form-group {
+  position: relative;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  left: 0;
+  right: 0;
+  bottom: -40px;
+}
+
+.submit-button-container button {
+  background-color: #a34caf;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button-container button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.4) 33%, transparent 66%, transparent);
+  opacity: 0;
+  transform: rotate(-30deg) scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.submit-button-container button:hover {
+  background-color: #b974b6;
+}
+
+.submit-button-container button:hover::before {
+  opacity: 1;
+  transform: rotate(-30deg) scale(1.2);
+}
+
+
+
+      </style>
+</head>
+<body>
+    <div class="background">
+    <header>
+		<nav>
+			<div class="logo">
+                <a href="index.html">
+				<img src="./images/logojk2-remove.png" alt="JK Events & You">
+                </a>
+			</div>
+			<ul class="nav-links">
+				<li><a href="./index.html">Accueil</a></li>
+				<li><a href="./">Réserver</a></li>
+				<li><a href="./apropos.html">À propos</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="container">
+        <h2>Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.</h2>
+        <form action="mailto:eleazardu95@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">NOM Prénom:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Quelle prestation ?</label>
+            <select id="service" name="service" required>
+              <option value="Anniversaire">Anniversaire</option>
+              <option value="Mariage">Mariage</option>
+              <option value="Baby Shower">Baby Shower</option>
+              <option value="Soirée">Soirée</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Choisir la date de l'évènement:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="location">Lieu de l'évènement:</label>
+            <input type="text" id="location" name="location" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Votre message ici : informations complémentaires sur votre projet (idées, questions, budget, etc...)"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="submit-button-container">
+              <button type="submit">Envoyer</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+	
+	<footer>
+		<p>© JK Events & You 2023</p>
+	</footer>
+    </div>
+	<script src="./script.js"></script>
+</body>
+</html>
